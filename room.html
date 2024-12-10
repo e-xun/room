@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Room</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+            integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/room.css" />
+        <link
+            rel="stylesheet"
+            href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+        />
+
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <script src="js/splitting.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    </head>
+    <body>
+        <!-- 메뉴헤더입니다 -->
+        <header>
+            <h1>
+                <a href="index.html"><img src="img/room_logo.png" /></a>
+            </h1>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Room</a></li>
+                <li><a href="#">Facilities</a></li>
+                <li><a href="#">Travel</a></li>
+                <li><a href="#">Community</a></li>
+            </ul>
+            <!-- 히든메뉴입니다 -->
+            <div class="menu_hidden">
+                <div class="icon">
+                    <p>
+                        <i class="fa-solid fa-bars"></i>
+                    </p>
+                </div>
+                <div class="nav">
+                    <p><a href="#">About</a></p>
+                    <p><a href="#">Room</a></p>
+                    <p><a href="#">Facilities</a></p>
+                    <p><a href="#">Travel</a></p>
+                    <p><a href="#">Community</a></p>
+                </div>
+            </div>
+        </header>
+
+        <!-- 비주얼 입니다 -->
+        <div id="visual">
+            <img src="img/room_visual.jpg" />
+        </div>
+
+        <!-- 컨테이너 입니다 -->
+        <div id="container">
+            <section class="con1">
+                <div class="con1bar"></div>
+                <div class="con1txt">
+                    <h2>ROOM 예약하기</h2>
+                    <ul>
+                        <li>
+                            <p>숙박 기간</p>
+                            <div class="date-picker">
+                                <input
+                                    type="text"
+                                    id="checkin"
+                                    placeholder="체크인 날짜"
+                                    readonly
+                                />
+                            </div>
+                            <div class="date-picker">
+                                <input
+                                    type="text"
+                                    id="checkout"
+                                    placeholder="체크아웃 날짜"
+                                    readonly
+                                />
+                            </div>
+                        </li>
+                        <li>
+                            <p>객실</p>
+                            <input type="number" id="rooms" min="1" value="1" />
+                        </li>
+                        <li>
+                            <p>성인</p>
+                            <input
+                                type="number"
+                                id="adults"
+                                min="1"
+                                value="2"
+                            />
+                        </li>
+                        <li>
+                            <p>어린이(36개월~만12세)</p>
+                            <input
+                                type="number"
+                                id="children"
+                                min="0"
+                                value="0"
+                            />
+                        </li>
+                        <li>
+                            <button class="search-btn">객실 검색</button>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="con2">
+                <div class="con2-move">
+                    <div class="con2bg"></div>
+                    <div class="con2-wrap">
+                        <div class="con2left">
+                            <h3>
+                                Raum<br />
+                                The HANOK
+                            </h3>
+                            <p>생동감 넘치는 색다른여행의 시작</p>
+                            <ul class="con2_txt">
+                                <li>#전망좋은</li>
+                                <li>#스타일리시</li>
+                                <li>#애견동반</li>
+                            </ul>
+                            <ul class="con2_tmg">
+                                <li>
+                                    <p>
+                                        <img src="img/con201.png" />
+                                    </p>
+                                    PREMIUM SPA
+                                </li>
+                                <li>
+                                    <p>
+                                        <img src="img/con202.png" />
+                                    </p>
+                                    SKYARD
+                                </li>
+                                <li>
+                                    <p>
+                                        <img src="img/con203.png" />
+                                    </p>
+                                    PET LOVE
+                                </li>
+                                <li>
+                                    <p>
+                                        <img src="img/con204.png" />
+                                    </p>
+                                    FREE<br />MINI BAR
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="con2ri">
+                            <img src="img/room_1.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="con3">
+                <div class="con3-move">
+                    <div class="con3bg"></div>
+                    <div class="con3-wrap">
+                        <div class="con3left">
+                            <img src="img/room_2.jpg" />
+                        </div>
+                        <div class="con3ri">
+                            <h3>
+                                Raum<br />
+                                The HANOK
+                            </h3>
+                            <p>당신의 감각을 깨우는 행복한 경험</p>
+                            <ul class="con3_txt">
+                                <li>#편안한 휴식</li>
+                                <li>#친환경</li>
+                                <li>#자쿠지</li>
+                            </ul>
+                            <ul class="con3_tmg">
+                                <li>
+                                    <p>
+                                        <img src="img/con301.png" />
+                                    </p>
+                                    CLUB FLOOR
+                                </li>
+                                <li>
+                                    <p>
+                                        <img src="img/con302.png" />
+                                    </p>
+                                    WALKEE
+                                </li>
+                                <li>
+                                    <p>
+                                        <img src="img/con303.png" />
+                                    </p>
+                                    CONCEPT<br />ROOMS
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="con4">
+                <div class="con4-wrap">
+                    <div class="con4bg"></div>
+                    <div class="con4line"></div>
+                    <div class="con4img">
+                        <img src="img/room_3.jpg" />
+                    </div>
+                    <div class="con4txt">
+                        <div class="con4left">
+                            <h3>
+                                DOUGLAS HOUSE
+                                <span>나를 위한 조용한 숲 속 휴식처</span>
+                            </h3>
+                            <ul>
+                                <li>#자연친화적</li>
+                                <li>#힐링여행</li>
+                                <li>#숲속의한옥</li>
+                                <li>#편안한 쉼터</li>
+                            </ul>
+                        </div>
+                        <div class="con4ri">
+                            <ul>
+                                <li>
+                                    <p><img src="img/con401.png" /></p>
+                                    LIBRARY
+                                </li>
+                                <li>
+                                    <p><img src="img/con402.png" /></p>
+                                    DOUGLAS<br />LOUNGE
+                                </li>
+                                <li>
+                                    <p><img src="img/con403.png" /></p>
+                                    DOUGLAS<br />GARDEN
+                                </li>
+                                <li>
+                                    <p><img src="img/con404.png" /></p>
+                                    MULTI<br />ROOM
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="con5">
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-map-pin"></i>
+                        <p>경북 경주시 보문마을4길 23 라움 더 한옥</p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>airktkd2@naver.com</p>
+                    </li>
+                    <li>
+                        <i class="fa-regular fa-credit-card"></i>
+                        <p>가상은행 123-4567-8901-23</p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <p>1234-1234</p>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- 푸터입니다 -->
+        <footer>
+            <div class="footer_logo">
+                <h1><img src="img/room_logo.png" /></h1>
+                <p>© 2024 Raum The Hanok CO. BY Eunjin</p>
+            </div>
+            <div class="data">
+                <ul>
+                    <li>
+                        <p>CEO</p>
+                        <h4>Kim Eun-Jin</h4>
+                    </li>
+                    <li>
+                        <p>Business license number</p>
+                        <h4>123-12-12345</h4>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p>Address</p>
+                        <h4>23 Bomun Village 4-gil, Gyeongju-si</h4>
+                    </li>
+
+                    <li>
+                        <p>Fax</p>
+                        <h4>1234-123-1234</h4>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+
+        <script>
+            gsap.registerPlugin(ScrollTrigger);
+        </script>
+
+        <script src="js/room.js"></script>
+    </body>
+</html>
